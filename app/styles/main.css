@@ -1,0 +1,111 @@
+*, *::before, *::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 100%;
+}
+
+body {
+    height: 100%;
+    /*background-image: url(../assets/images/tree_forest.jpeg);*/
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+.navbar {
+    position: fixed;
+    top: 9rem;
+    padding: 0.5rem;
+    width: 100%;
+    height: 50px;
+    font-family: 'Coda Caption', sans-serif;
+    /*background-image: url(../assets/images/evergreen_forest.jpeg);*/
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.chat-dropdown {
+    position: absolute;
+    left: 2rem;
+    top: 0;
+    padding: 1rem;
+    color: rgb(53,78,134);
+    cursor: pointer; /* produces the finger pointer icon when you hover over the logo */
+}
+
+.register-link {
+    position: absolute;
+    left: 44%;
+    top: 0;
+    padding: 1rem;
+    color: rgb(53,78,134);
+    cursor: pointer; /* produces the finger pointer icon when you hover over the logo */
+}
+
+.login-dropdown {
+    position: absolute;
+    right: 2rem;
+    top: 0;
+    padding: 1rem;
+    color: rgb(53,78,134);
+    cursor: pointer; /* produces the finger pointer icon when you hover over the logo */
+}
+
+.ion-arrow-down-b {
+  position: relative;
+  color: rgb(53,78,134);
+  cursor: pointer; /* produces the finger pointer icon when you hover over the logo */
+}
+
+
+/* #5 */
+.links-container .navbar-link:hover {
+
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 64rem;
+}
+
+.container.narrow {
+    max-width: 56rem;
+}
+
+/* Medium and small screens (640px) */
+@media (min-width: 640px) {
+    html { font-size: 112%; }
+
+    .column {
+        float: left;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .column.full { width: 100%; }
+    .column.two-thirds { width: 66.7%; }
+    .column.half { width: 50%; }
+    .column.third { width: 33.3%; }
+    .column.fourth { width: 25%; }
+    .column.flow-opposite { float: right; }
+}
+
+/* Large screens (1024px) */
+@media (min-width: 1024px) {
+    html { font-size: 120%; }
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
