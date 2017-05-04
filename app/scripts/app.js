@@ -7,6 +7,11 @@
             });
 
         $stateProvider
+            .state('modal', {
+                url: '/add',
+                controller: 'ModalCtrl as modal',
+                templateUrl: '/templates/modal.html'
+            })
             .state('home', {
                 url: '/',
                 controller: 'HomeCtrl as home',
@@ -15,6 +20,6 @@
     }
 
     angular
-        .module('blocChat', ['ui.router', 'firebase'])
+        .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap'])
         .config(config);
 })();
