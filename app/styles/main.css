@@ -6,6 +6,7 @@
 
 html {
     height: 100%;
+    width: 100%;
     font-size: 100%;
 }
 
@@ -15,6 +16,51 @@ body {
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
+}
+
+h1 {
+    position: fixed;
+    z-index: 0;
+    color: white;
+}
+
+.wrapper {
+    width: 30%;
+    background-color: #ff3300;
+    color: white;
+    height: 100%;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.main-view {
+    width: 25%;
+    height: 100%;
+    z-index: 3;
+    position: relative;
+    left: 160px;
+    color: white;
+    top: 150px;
+}
+
+.roomName {
+    display: block;
+}
+
+.modal {
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    z-index: 6;
+    background-color: white;
+    color: #ff3300;
+    bottom: -150px;
 }
 
 .navbar {
