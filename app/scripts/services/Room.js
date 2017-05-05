@@ -1,13 +1,23 @@
 (function() {
     function Room($firebaseArray) {
-        console.log("Room function is running");
-
         var ref = firebase.database().ref().child("rooms");
         var rooms = $firebaseArray(ref);
-        console.log(rooms);
 
         return {
-            all: rooms
+            all: rooms,
+            addRoom: function(room) {
+                var newRoom = {};
+                var number = rooms.length + 1;
+                newRoom[number] = room;
+                rooms.$add(newRoom[number]);
+            }
+            <!--Remove Room from the firebase array-->
+            // removeRoom: function(room) {
+            //     var oldRoom = {};
+            //     var number = rooms.length - 1;
+            //     oldRoom[number] = room;
+            //     rooms.$remove(oldRoom[number]);
+            // }
         };
     }
 
