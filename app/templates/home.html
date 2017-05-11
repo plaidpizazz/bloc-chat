@@ -1,11 +1,20 @@
-<section>
-    <div class="wrapper">
-    </div>
+<section class="sidebar">
+    <div class="sidebar-header">
     <h1>Bloc Chat</h1>
-    <div class="main-view" ng-repeat="room in home.all">
-        <h2 class="roomName">{{ room.$value }}</h2>
-        <br>
     </div>
-
+    <div class="sidebar-nav" ng-repeat="room in home.chatRooms">
+        <h2 class="roomName" ng-click="home.selectedRoom(room)">{{ room.$value }}</h2>
+    </div>
     <button class="modal" ng-click="home.open()">Create Rooms</button>
 </section>
+
+<div class="col-sm-8 chat-view">
+    <div class="chat-window">
+        <h1 ng-show="home.activeRoom == null">Select or create a chat room to begin.</h1>
+        <h1 ng-show="home.activeRoom !== null">Welcome to "{{home.activeRoom.$value}}" Chat!</h1>
+        <div class="chat-messages" ng-if="home.activeRoom !==null"  ng-repeat="message in home.activeRoomMessages">
+            <p class="chat-contents chat-messages">{{message.content}}</p>
+            <p class="chat-messages chat-user-info">{{message.username}} {{message.sentAt}}</p>
+        </div>
+    </div>
+</div>

@@ -18,14 +18,42 @@ body {
     background-size: cover;
 }
 
-h1 {
-    position: fixed;
-    z-index: 0;
-    color: white;
+.chat-navigate{
+    color: mediumblue;
+    font-weight: 600;
+    background-color: #7AE1E1;
+    border-radius: 5%;
+    padding: 10px;
 }
 
-.wrapper {
-    width: 30%;
+.chat-view{
+    background-color: #ff3300;
+    padding: 20px;
+    margin: 10px;
+    min-height: 80%;
+
+}
+
+.chat-window{
+    padding-left: 60px;
+    text-align: right;
+    color: white;
+
+}
+
+.chat-messages{
+    border: solid 1px white;
+    padding-top: 2;
+    padding-bottom: 2;
+    margin:1px;
+}
+
+.chat-user-info{
+    text-align: right;
+}
+
+.sidebar {
+    width: 25%;
     background-color: #ff3300;
     color: white;
     height: 100%;
@@ -35,21 +63,55 @@ h1 {
     left: 0;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
 }
 
-.main-view {
-    width: 25%;
-    height: 100%;
+.sidebar-header {
+    position: fixed;
+    z-index: 0;
+    color: white;
+}
+
+.sidebar-nav {
+    top: 75px;
+    right: 15px;
     z-index: 3;
     position: relative;
-    left: 160px;
     color: white;
-    top: 150px;
+    font-size: 75%;
+    text-align: right;
 }
 
 .roomName {
     display: block;
+}
+
+.chatroom {
+    width: 80%;
+    float: right;
+    text-align: left;
+    color: #4c4949;
+    position: relative;
+    z-index: 6;
+}
+
+.chatroom-name {
+    color: #009999;
+}
+
+p {
+    top: -20px;
+    padding: 5px;
+    display: inline;
+}
+
+.chatroom-username {
+    color: #009999;
+}
+
+.chatroom-time {
+    font-style: italic;
+    text-align: right;
+    font-size: 45%;
 }
 
 .modal {
