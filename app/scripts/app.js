@@ -7,11 +7,11 @@
             });
 
         $stateProvider
-            .state('modal', {
-                url: '/add',
-                controller: 'ModalCtrl as modal',
-                templateUrl: '/templates/modal.html'
-            })
+            // .state('modal', {
+            //     url: '/add',
+            //     controller: 'ModalCtrl as modal',
+            //     templateUrl: '/templates/modal.html'
+            // })
             .state('home', {
                 url: '/',
                 controller: 'HomeCtrl as home',
