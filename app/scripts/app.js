@@ -7,11 +7,11 @@
             });
 
         $stateProvider
-            // .state('modal', {
-            //     url: '/add',
-            //     controller: 'ModalCtrl as modal',
-            //     templateUrl: '/templates/modal.html'
-            // })
+            .state('modal', {
+                url: '/add',
+                controller: 'ModalCtrl as modal',
+                templateUrl: '/templates/modal.html'
+            })
             .state('home', {
                 url: '/',
                 controller: 'HomeCtrl as home',
@@ -27,7 +27,7 @@
                 controller: function($scope, $uibModalInstance){
                     $scope.createUser = function(newUserName){
                         $uibModalInstance.close();
-                        $cookies.put('blocChatCurrentUser', newUserName)
+                        $cookies.put('blocChatCurrentUser', newUserName);
                     }
                 },
                 size: 'md'

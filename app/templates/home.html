@@ -1,12 +1,14 @@
-<section class="sidebar">
-    <div class="sidebar-header">
-    <h1>Bloc Chat</h1>
-    </div>
-    <div class="sidebar-nav" ng-repeat="room in home.chatRooms">
-        <h2 class="roomName" ng-click="home.selectedRoom(room)">{{ room.$value }}</h2>
-    </div>
-    <button class="modal" ng-click="home.open()">Create Rooms</button>
-</section>
+<div class="col-sm-3">
+    <section class="sidebar">
+        <div class="sidebar-header">
+        <h1>Bloc Chat</h1>
+        </div>
+        <div class="sidebar-nav" ng-repeat="room in home.chatRooms">
+            <h2 class="roomName" ng-click="home.selectedRoom(room)">{{ room.$value }}</h2>
+        </div>
+        <button class="btn btn-info" ng-click="home.open()">Create Rooms</button>
+    </section>
+</div>
 
 <div class="col-sm-8 chat-view">
     <div class="chat-window">

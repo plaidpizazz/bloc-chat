@@ -13,18 +13,18 @@
             this.activeRoomMessages = Room.getMessagesById(this.activeRoom.$id);
         };
 
-        // this.open = function() {
-        //     $rootScope.modalInstance = $uibModal.open({
-        //         animation: true,
-        //         arialLabelledBy: 'modal-title',
-        //         arialDescribedBy: 'modal-body',
-        //         templateUrl: 'templates/modal.html',
-        //         controller: 'ModalCtrl',
-        //         controllerAs: 'modal',
-        //         size: 'modal-sm',
-        //         scope: $scope
-        //     });
-        // };
+        this.open = function() {
+            $rootScope.modalInstance = $uibModal.open({
+                animation: true,
+                arialLabelledBy: 'modal-title',
+                arialDescribedBy: 'modal-body',
+                templateUrl: 'templates/modal.html',
+                controller: 'ModalCtrl',
+                controllerAs: 'modal',
+                size: 'modal-sm',
+                scope: $scope
+            });
+        };
 
     }
 
