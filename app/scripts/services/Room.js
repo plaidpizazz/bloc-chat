@@ -7,11 +7,11 @@
 
         return {
             all: rooms,
-            create: function(roomName) {
-                // var newRoom = {};
-                // var number = rooms.length + 1;
-                // newRoom[number] = room;
-                rooms.$add({ name: roomName });
+            create: function(room) {
+                var newRoom = {};
+                var number = rooms.length + 1;
+                newRoom[number] = room;
+                rooms.$add(newRoom[number]);
             },
             getMessagesById: function(activeRoomId) {
                 return $firebaseArray(messageRef.orderByChild("roomId").equalTo(activeRoomId));

@@ -10,9 +10,19 @@
     top: 100px;
 }
 
+.modal-title {
+    color: #ff3300;
+}
+
 .modal-body {
     position: relative;
     display: inline-block;
+    color: #ff3300;
+
+}
+
+.modal-footer {
+    color: #ff3300;
 }
 
 button {

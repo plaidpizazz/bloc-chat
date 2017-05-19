@@ -1,7 +1,7 @@
 (function() {
     function ModalCtrl($rootScope, $uibModal, $scope, $uibModalInstance, Room) {
         this.create = function(room) {
-            Room.addRoom(room);
+            Room.create(room);
             $uibModalInstance.close();
         };
 
