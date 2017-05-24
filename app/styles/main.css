@@ -42,9 +42,13 @@ h1 {
 }
 
 .chat-window{
-    padding-left: 60px;
+    overflow: scroll;
+    height: 600px;
+    width: 600px;
+    margin-bottom: 80px;
+    /*padding-left: 60px;
     text-align: center;
-    color: white;
+    color: white;*/
 
 }
 
@@ -159,6 +163,26 @@ p {
     margin-top: 20px;
     margin-bottom: 10px;
     color: #ff3300;
+}
+
+.send-message {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 15px;
+    display: inline-block;
+    color: #ff3300;
+    padding: 10px;
+}
+
+.message-entry {
+    float: left;
+    width: 80%;
+}
+
+.message-entry .btn {
+    margin: 10px;
 }
 
 .navbar {
