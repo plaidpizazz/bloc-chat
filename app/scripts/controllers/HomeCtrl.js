@@ -13,6 +13,11 @@
             this.activeRoomMessages = Room.getMessagesById(this.activeRoom.$id);
         };
 
+        this.sendMessage = function(messageContent){
+            Room.send(messageContent, this.activeRoom.$id);
+            $scope.textarea.$setPristine();
+        };
+
         this.open = function() {
             $rootScope.modalInstance = $uibModal.open({
                 animation: true,
